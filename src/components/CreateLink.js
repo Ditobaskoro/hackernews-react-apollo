@@ -18,7 +18,7 @@ const CreateLink = () => {
   const [description, setDescription] = useState('')
   const [url, setUrl] = useState('')
 
-  const [postMutation ] = useMutation(POST_MUTATION, {
+  const [postMutation] = useMutation(POST_MUTATION, {
     variables: {description, url},
     onCompleted: () => this.props.history.push('/')
   })
