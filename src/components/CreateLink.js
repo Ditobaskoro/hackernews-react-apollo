@@ -20,6 +20,7 @@ const CreateLink = () => {
 
   const [postMutation ] = useMutation(POST_MUTATION, {
     variables: {description, url},
+    onCompleted: () => this.props.history.push('/')
   })
 
   return (
