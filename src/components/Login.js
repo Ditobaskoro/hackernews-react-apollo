@@ -28,7 +28,7 @@ const Login = ({ history }) => {
   
   const [onMutation] = useMutation(login ? LOGIN_MUTATION : SIGNUP_MUTATION, {
     variables: { email, password, name },
-    onCompleted: () => data => _confirm(data)
+    onCompleted: data => _confirm(data)
   })
 
   const _confirm = async data => {
